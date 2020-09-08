@@ -39,6 +39,7 @@ All notable changes to Sourcegraph are documented in this file.
 ### Removed
 
 - The smartSearchField feature is now always enabled. The `experimentalFeatures.smartSearchField` settings option has been removed.
+- The site configuration custom branding `disableSymbolSpin` property was removed because the logo symbol spinning virual effect has been removed entirely.
 
 ## 3.19.2
 

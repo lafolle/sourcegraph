@@ -103,9 +103,6 @@ export interface SourcegraphContext extends Pick<Required<SiteConfiguration>, 'e
         /** Override style for dark themes */
         dark?: BrandAssets
 
-        /** Prevents the icon in the top-left corner of the screen from spinning. */
-        disableSymbolSpin?: boolean
-
         brandName: string
     }
 

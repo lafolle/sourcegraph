@@ -465,11 +465,6 @@ const SiteSchemaJSON = `{
           "type": "string",
           "format": "uri"
         },
-        "disableSymbolSpin": {
-          "description": "Prevents the icon in the top-left corner of the screen from spinning on hover.",
-          "type": "boolean",
-          "default": false
-        },
         "brandName": {
           "description": "String to display everywhere the brand name should be displayed. Defaults to \"Sourcegraph\"",
           "type": "string",
@@ -486,8 +481,7 @@ const SiteSchemaJSON = `{
           "dark": {
             "logo": "https://example.com/logo_dark.png",
             "symbol": "https://example.com/search_symbol_dark_24x24.png"
-          },
-          "disableSymbolSpin": true
+          }
         }
       ]
     },

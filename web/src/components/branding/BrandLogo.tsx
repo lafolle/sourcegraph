@@ -12,6 +12,9 @@ interface Props extends ThemeProps, Exclude<React.ImgHTMLAttributes<HTMLImageEle
      * The assets root path. If not set, the global value from `window.context.assetsRoot` is used.
      */
     assetsRoot?: typeof window.context.assetsRoot
+
+    /** Whether to show the full logo (with text) or only the symbol icon. */
+    variant: 'logo' | 'symbol'
 }
 
 /**
@@ -22,9 +25,13 @@ export const BrandLogo: React.FunctionComponent<Props> = ({
     isLightTheme,
     branding = window.context?.branding,
     assetsRoot = window.context?.assetsRoot || '',
+    variant,
     ...props
 }) => {
-    const sourcegraphLogoUrl = `${assetsRoot}/img/sourcegraph${isLightTheme ? '-light' : ''}-head-logo.svg?v2`
-    const customBrandingLogoUrl = branding?.[isLightTheme ? 'light' : 'dark']?.logo
+    const sourcegraphLogoUrl =
+        variant === 'symbol'
+            ? `${assetsRoot}/img/sourcegraph-mark.svg`
+            : `${assetsRoot}/img/sourcegraph${isLightTheme ? '-light' : ''}-head-logo.svg?v2`
+    const customBrandingLogoUrl = branding?.[isLightTheme ? 'light' : 'dark']?.[variant]
     return <img {...props} src={customBrandingLogoUrl || sourcegraphLogoUrl} />
 }

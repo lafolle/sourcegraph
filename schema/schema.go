@@ -287,8 +287,6 @@ type Branding struct {
 	// BrandName description: String to display everywhere the brand name should be displayed. Defaults to "Sourcegraph"
 	BrandName string       `json:"brandName,omitempty"`
 	Dark      *BrandAssets `json:"dark,omitempty"`
-	// DisableSymbolSpin description: Prevents the icon in the top-left corner of the screen from spinning on hover.
-	DisableSymbolSpin bool `json:"disableSymbolSpin,omitempty"`
 	// Favicon description: The URL of the favicon to be used for your instance. We recommend using the following file format: ICO
 	Favicon string       `json:"favicon,omitempty"`
 	Light   *BrandAssets `json:"light,omitempty"`
